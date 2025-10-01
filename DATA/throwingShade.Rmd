@@ -1,0 +1,165 @@
+---
+title: 'FALL 2025 DATA151: Midterm #1 (R Section)'
+author: "CRAYON CODE NAME"
+date: "TODAYS DATE"
+output: pdf_document
+---
+  
+
+### Throwing Shade!
+
+Please read ALL descriptions and directions. 
+
+#### Description: 
+
+Researchers are interested in studying the effect of shade, during certain times of the growth season on kiwi crop yield. 
+  
+#### Part 0: Directions
+
+* Create a new R markdown document for the Midterm template 
+* Create a folder called "MIDTERM_1"
+* Save new Rmd in your R Studio Cloud as "data151_mid1_COLOR"
+
+#### Part 1: Getting Started (5 points)
+* Change the author to your code name and date in the heading of the R markdown - 2 points
+* Leave yourself at least 3 comments in your code chunks (overall) - 3 points
+
+#### Part 2: Installing the package  (2.5 points)
+
+In order to access these data you will need to install the package `DAAG`.
+
+```{r}
+## INSERT CODE HERE ###
+
+```
+
+#### Part 3: Library (2.5 points)
+
+Now you actually need to call the library for the DAAG package to be able to get the data.  
+
+```{r}
+## INSERT CODE HERE ###
+
+```
+
+#### Part 4: Bring the Data into the Global Environment (2.5 points)
+
+These data are simply called `kiwishade`.  Please call them into the global environment
+
+```{r}
+## INSERT CODE HERE ###
+
+```
+
+#### Part 5: Learn about the Data (5 points)
+
+Look at the help file and read about this study. 
+
+```{r}
+## INSERT CODE HERE ###
+```
+
+
+After reading about this study answer the following question. 
+
+Do these data come from an observational study or an experiment?  Explain your choice. 
+
+```{}
+YOUR ANSWER HERE: 
+```
+
+
+#### Part 6: Structure 
+
+##### A) (2.5 points) Look at the structure of your data.  
+
+How many observations are there? 
+  
+```{r}
+## INSERT CODE HERE ###
+
+```
+
+##### B) (2.5 points) Look at the first six rows of the data frame.  
+  
+NOTE: You must write code with the proper function for this.
+
+```{r}
+## INSERT CODE HERE ###
+```
+
+Are these data tidy?  Why or why not? 
+
+```{}
+YOUR ANSWER HERE:
+
+```
+
+
+#### Part 7: Understanding the study 
+
+
+##### A): What is the response variable? (2.5 points)
+
+```{}
+YOUR ANSWER HERE: 
+
+```
+
+##### B): What is the explanatory variable? (2.5 points)
+
+```{}
+YOUR ANSWER HERE: 
+
+```
+
+Is there a control in this study?  What is it?
+
+```{}
+YOUR ANSWER HERE: 
+
+```
+
+
+#### Part 8: Make a hypothesis (2.5 points)
+
+Write a hypothesis about how you think the treatments might effect the response.
+
+
+```{}
+YOUR ANSWER HERE: 
+
+```
+
+#### Part 9: Visualize (2.5 points)
+
+Explore the relationship between the response and explanatory by creating a boxplot.  
+
+HINT: Please look at your class notes from OrchardSprays and ToothGrowth.
+
+```{r}
+## MAKE SURE TO LABEL YOUR AXES
+## INSERT CODE HERE ###
+
+## INSERT CODE HERE ###
+```
+
+#### Part 10: Observations (2.5 points)
+
+What are your observations from this plot? Does your hypothesis (from Part 8) appear to be supported? Explain.
+
+```{}
+YOUR ANSWER HERE: 
+
+```
+
+#### EXTRA CREDIT (5 points)
+
+Explain how blocking is used in this study.
+
+Hint: Read the details.
+
+```{}
+YOUR ANSWER HERE
+```
+
