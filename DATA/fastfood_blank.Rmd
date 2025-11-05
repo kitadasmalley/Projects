@@ -1,0 +1,208 @@
+---
+title: 'Midterm #2: Tidyverse Skills Check'
+author: "CRAYON COLOR CODE NAME"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+
+### Learning Objectives: 
+
+Students will demonstrate their ability to translate questions into code using `tidyverse` packages and verbs. 
+
+* `dplyr`: `filter()`, `mutate()`, `group_by()`, `summarise()`, `count()`, ect
+* `ggplot2`: `ggplot()`, `aes()`, `geom_bar`, `geom_col`, `geom_histogram`, `geom_boxplot`
+
+#### Step 0: Library tidyverse
+
+```{r warning=FALSE, message=FALSE}
+library(tidyverse)
+```
+
+#### Step 1: Load the Data 
+
+There data represent entrees at eight fast food chains (MacDonalds, Chick Fil-A, Sonic, Arbys, Burger King, Dairy Queen, Subway, and Taco Bell).  These data were hosted on TidyTuesday on 9/04/2018.  TidyTuesdaywhich is a weekly social data project.
+
+**Original Citation**: 
+
+* These data were originally scraped from <fastfoodnutrition.com>
+
+**Data Source**: 
+
+* The git repository can be found here <https://github.com/rfordatascience/tidytuesday/tree/main/data/2018/2018-09-04>
+
+```{r message=FALSE, warning=FALSE}
+fastfood<-read.csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/refs/heads/main/data/2018/2018-09-04/fastfood_calories.csv", header=TRUE)
+```
+
+#### Step 2: Look at the data
+
+What variables are available to work with? 
+
+```{r}
+str(fastfood)
+```
+
+For this assessment you will use the following variables: 
+
+* `restaurant`: Names of restaurants in these data
+* `item`: Name of entree food item
+* `calories`
+* `sodium`
+* `protein`
+
+
+#### Queston 1: Soo Many Choices
+
+Which restaurant has the most unique menu choices? 
+
+##### PART A: dplyr (5 points)
+
+TASK:
+Create a data frame that shows the number of unique menu items from each restaurant.  Order the data from greatest to least.  Make sure you store this data frame because you will be using it in the next part. 
+
+
+```{r}
+## MENU ITEMS 
+## INSERT CODE HERE ##
+
+## PLEASE DONT FORGET TO ANSWER THE QUESTIONS (NOT JUST THE CODE)
+```
+
+##### PART B: ggplot (5 points)
+
+Create a bar graph using the tabulated data above (not the raw data). There should be a bar for each restaurant and each bar should be filled with its own color.  Give the plot a title that mentions the restaurant with the most options. 
+
+```{r}
+### MAKE BAR GRAPH COMPARING NUMBER OF ENTREES 
+## INSERT CODE HERE ##
+```
+
+#### Queston 2: Don't Be Salty
+
+The American Heart Association recommends no more than 2,300 mg a day of sodium.  
+
+Source: <https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/sodium/how-much-sodium-should-i-eat-per-day> 
+
+##### PART A: High Sodium (5 points)
+
+TASK: Make a new data frame that only contains menu items that have more than the recommended daily amount of sodium (2300 mg). 
+
+```{r}
+### HIGH SODIUM
+## INSERT CODE HERE ##
+```
+
+##### PART B: Frequency (5 points)
+
+TASK: Of the menu items that have high sodium (from Part 2A), which restaurant is occurs most often? 
+
+```{r}
+### SALTY
+## INSERT CODE HERE ##
+
+
+## PLEASE DONT FORGET TO ANSWER THE QUESTIONS (NOT JUST THE CODE)
+```
+BONUS: What type of distribution would Part 2B, be considered? (2 points)
+
+```{}
+### YOUR ANSWER HERE ###
+### PLEASE REMEMBER TO USE LINE BREAKS TO KEEP TEXT FROM RUNNING OFF 
+```
+
+#### Queston 3: Protein Ratio
+
+##### PART A: Create a New Variable (4 points)
+
+Create a new variable in the data frame for the number of calories per gram of protein. 
+
+```{r}
+### CREATE NEW VARIABLE 
+### CAL PER PRO
+## INSERT CODE HERE ##
+
+```
+
+##### PART B: Good Options? (6 points)
+
+Which restaurant chain has the "best" (lowest) calorie to protein ratio on average? 
+```{r}
+### BEST RATIO ON AVERAGE
+### LOWER IS BETTER
+## INSERT CODE HERE ##
+```
+
+
+
+#### Queston 4: More Protein!
+
+##### PART A: ggplot (6 points)
+
+Create a histogram, a density plot, and a boxplot that show the distribution of the grams of protein across all the menu items.  
+
+```{r}
+### HISTOGRAM
+## INSERT CODE HERE ##
+
+### DENSITY
+## INSERT CODE HERE ##
+
+### BOXPLOT
+## INSERT CODE HERE ##
+```
+
+
+##### PART B: Numerical Summaries (2 points)
+
+TASK:  Find the five-number summary and the mean for the distribution of protein in the fast food menu items. 
+
+```{r}
+### SUMMARY
+## INSERT CODE HERE ##
+```
+
+##### PART C: Fences (6 points)
+
+TASK:  Compute the lower and upper "fences" to identify if a value is an outlier.
+
+HINT: You will need to find the IQR first. 
+
+```{r}
+### IQR
+## INSERT CODE HERE ##
+
+### UPPER
+## INSERT CODE HERE ##
+
+### LOWER
+## INSERT CODE HERE ##
+```
+
+##### PART D: Outliers (6 points)
+
+TASK: Identify the menu items that are flagged as upper outliers.  How many are there?  Which menu item has the most protein?  
+
+HINT: 
+- You can use a dplyr verb to retain only the outlier values. 
+- 
+
+```{r}
+### OUTLIERS
+## INSERT CODE HERE ##
+
+## PLEASE DONT FORGET TO ANSWER THE QUESTIONS (NOT JUST THE CODE)
+```
+
+##### PART E: Bringing It All Together (5 points)
+
+Using all the information from Parts A, B, C, and D, describe the distribution of protein.  
+
+Remember to comment on the shape of the distribution, the proper metrics for center and spread (given the shape), and outliers. 
+
+```{}
+### YOUR ANSWER HERE ###
+### PLEASE REMEMBER TO USE LINE BREAKS TO KEEP TEXT FROM RUNNING OFF 
+```
+
