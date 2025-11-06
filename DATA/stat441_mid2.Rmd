@@ -1,0 +1,107 @@
+---
+title: 'STAT 441: Midterm 2'
+author: "NAME HERE"
+date: "DATE"
+output: pdf_document
+---
+
+## Application in R: Cereal
+
+For this part of the exam you will need to use the cereal dataset from Lock5’s Statistics: Unlocking the power of data.  These data are available on the Lock5 website.  
+
+#### Citations: 
+
+* Lock, R. H., Lock, P. F., Morgan, K. L., Lock, E. F., & Lock, D. F. (2025). Statistics: Unlocking the power of data. John Wiley & Sons.
+* https://www.lock5stat.com/datapage3e.html (Accessed Nov 3, 2025)
+
+#### Description of Data:
+
+These data contain nutritional information for 30 observations of different cereal types.
+
+
+### Access the Data
+
+```{r}
+# IMPORT THE DATA
+cereal<-read.delim("https://www.lock5stat.com/datasets1e/Cereal.txt",
+                   header=TRUE)
+
+str(cereal)
+```
+
+### Part A: Pairs Plot
+
+#### (i) Create a pairs plot for Calories, Sugar, Fat, Protein, and Carbs.  
+
+```{r}
+## INSERT CODE HERE ###
+```
+
+#### (ii) Discuss if there are linear relationships between Calories and the explanatory variables (Sugar, Fat, Protein, and Carbs).  
+
+YOUR ANSWER HERE: 
+
+#### (iii) How is evaluating this (linear) property fundamental in multiple linear regression (MLR)? 
+
+
+YOUR ANSWER HERE: 
+
+
+
+### Part B: 3D Scatter Plot with Fitted Model
+
+#### (i) Since we can’t see in more than three dimensions, let’s limit the explanatory variables to Sugar and Fat.  Fit an MLR model, for Calories as a function of Sugar and Fat. 
+
+```{r}
+### INSERT CODE HERE
+```
+
+#### (ii) Make a 3D scatterplot with the least squares fitted plane. 
+
+```{r}
+### INSERT CODE HERE
+```
+
+
+### Part C: Predict
+
+Professor Smalley noticed that Frosted Flakes are not contained in these data.  This is her father’s favorite cereal.  According to Google (citing USDA), a one cup serving of Frosted Flakes has 0.7 grams of fat and 11 grams of sugar.  
+
+Use your model from Part B (with Sugar and Fat) to predict the amount of calories from a new observation not contained in the data. 
+
+#### (i) What is the point estimate? 
+
+```{r}
+### INSERT CODE HERE ###
+```
+
+#### (ii) Provide an appropriate 95% interval for this estimate?  Please explain why you chose the interval method that you did.
+
+```{r}
+### INSERT CODE HERE ###
+```
+
+YOUR EXPLANATION HERE: 
+
+### Part D: Quadratic Forms and ANOVA
+
+Construct the ANOVA table using quadratic forms.
+
+```{r}
+## INSERT CODE HERE ##
+```
+
+
+### Part E: Global Model 
+
+Test for significance of regression using an F test.  Please use a 5% significance level.
+
+#### (i) Write the null and alternative hypotheses for the global model
+
+YOUR ANSWER HERE: 
+
+#### (ii) Write a five part conclusion for the global F-test.
+
+YOUR ANSWER HERE:
+
+
